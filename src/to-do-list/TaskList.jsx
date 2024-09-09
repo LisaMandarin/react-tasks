@@ -108,7 +108,6 @@ export function TaskList() {
             ))
             ) : "No data"}
         </ol>
-        <Link to='/'>Home</Link>
     </div>
     )
 }
