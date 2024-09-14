@@ -4,7 +4,8 @@ const { Link } = Typography
 export function Home() {
     const items = [
         {path: "/to-do-list/todolist", name: "Todo List"},
-        {path: "/useCallback/practice", name: "useCallback"}
+        {path: "/useCallback/callback", name: "useCallback"},
+        {path: "/position/positiondemo", name: "Position"}
     ]
     return (
         <div className="flex flex-row gap-2 m-4">
@@ -19,6 +20,3 @@ export function Home() {
         </div>
     )
 }
-
-{/* <Link href="/to-do-list/todolist">Todo List</Link>
-<Link href="/useCallback/practice">useCallback</Link> */}

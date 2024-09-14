@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import { TodoList } from "./to-do-list/TodoList"
 import { Home } from "./Home"
-import { Practice } from "./useCallback/practice"
+import { Callback } from "./useCallback/Callback"
+import { PositionDemo } from "./position/PositionDemo"
 
 export default function App() {
   return (
@@ -9,7 +10,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/to-do-list/todolist" element={<TodoList />}/>
-        <Route path="/useCallback/practice" element={<Practice />}/>
+        <Route path="/useCallback/callback" element={<Callback />} />
+        <Route path="/position/positiondemo" element={< PositionDemo/>} />
       </Routes>
     </>
   )
