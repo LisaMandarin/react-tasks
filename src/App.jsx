@@ -4,6 +4,7 @@ import { Home } from "./Home"
 import { Callback } from "./useCallback/Callback"
 import { PositionDemo } from "./position/PositionDemo"
 import { DisplayDemo } from "./display/DisplayDemo"
+import { FlexDemo } from "./Flex/FlexDemo"
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/useCallback/callback" element={<Callback />} />
         <Route path="/position/positiondemo" element={< PositionDemo/>} />
         <Route path="/display/displaydemo" element={<DisplayDemo />}/>
+        <Route path="/flex/flexdemo" element={<FlexDemo />}/>
       </Routes>
     </>
   )

@@ -6,7 +6,8 @@ export function Home() {
         {path: "/to-do-list/todolist", name: "Todo List"},
         {path: "/useCallback/callback", name: "useCallback"},
         {path: "/position/positiondemo", name: "Position"},
-        {path: "/display/displaydemo", name: "Display"}
+        {path: "/display/displaydemo", name: "Display"},
+        {path: "/flex/flexdemo", name: 'Flexbox'}
     ]
     return (
         <div className="flex flex-row gap-2 m-4">
