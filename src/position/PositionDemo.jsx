@@ -5,6 +5,13 @@ export function PositionDemo() {
 
     return (
         <div className="flex flex-col">
+            <ol className="m-3">
+                <li>static: The default position; elements appear in the normal document flow.</li>
+	            <li>relative: Elements are positioned relative to their normal position.</li>
+	            <li>absolute: Elements are positioned relative to their nearest positioned ancestor (non-static).</li>
+	            <li>fixed: Elements are positioned relative to the browser window and don’t move when scrolled.</li>
+	            <li>sticky: A hybrid between relative and fixed. The element is positioned relative until a certain scroll point is reached, at which point it becomes fixed.</li>
+            </ol>
             <div className="border border-black">
                 <div className="w-[500px] h-[500px] bg-red-200"></div>
                 <div className="w-[300px] h-[300px] bg-purple-800 relative top-[-300px] left-0">
