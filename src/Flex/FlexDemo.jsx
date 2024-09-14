@@ -118,6 +118,35 @@ export function FlexDemo() {
                     </div>
                 ))}
             </div>
+            <div className="m-4 flex gap-2 bg-yellow-700 text-white">
+                <div className="outlin p-4 flex-grow">
+                    Apple: flex-grow (take the extra space)
+                </div>
+                <div className="outline p-4">
+                    Banana
+                </div>
+                <div className="outline p-4">
+                    Celery
+                </div>
+                <div className="outline p-4">
+                    Donut
+                </div>
+            </div>
+            <div>flex-shrink takes away the width when there's not enough room</div>
+            <div className="m-4 flex gap-2 bg-yellow-700 text-white">
+                <div className="outlin p-4 basis-40 flex-grow">
+                    Apple
+                </div>
+                <div className="outline p-4 basis-40 flex-grow">
+                    Banana
+                </div>
+                <div className="outline p-4 basis-40 flex-grow">
+                    Celery
+                </div>
+                <div className="outline p-4 flex-shrink">
+                    Donut
+                </div>
+            </div>
             <Link href="/" className="block text-center m-4">Home</Link>
         </div>
     )
