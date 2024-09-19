@@ -7,7 +7,8 @@ export function Home() {
         {path: "/useCallback/callback", name: "useCallback"},
         {path: "/position/positiondemo", name: "Position"},
         {path: "/display/displaydemo", name: "Display"},
-        {path: "/flex/flexdemo", name: 'Flexbox'}
+        {path: "/flex/flexdemo", name: 'Flexbox'},
+        {path: '/form/formdemo', name: 'Form'}
     ]
     return (
         <div className="flex flex-row gap-2 m-4">
