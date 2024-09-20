@@ -1,28 +1,52 @@
 {
   "users": [
     {
-      "id": "ee48",
-      "name": "Miimi",
-      "birthday": "2016-12-14T16:00:00.000Z",
-      "age": 7,
+      "id": "4e16",
+      "name": "SpongeBob",
+      "birthday": "2012-03-16T16:00:00.000Z",
+      "age": 12,
       "native": true,
-      "address": "123 Faith Street, T City"
+      "address": "123 Nana Street, T City"
     },
     {
-      "id": "2365",
+      "id": "69db",
       "name": "Clark",
-      "birthday": "2005-11-16T16:00:00.000Z",
+      "birthday": "2005-11-29T16:00:00.000Z",
       "age": 18,
-      "native": false,
-      "address": "123 Main Street, K City"
+      "native": true,
+      "address": "555 Nana Street, T City"
     },
     {
-      "id": "6480",
-      "name": "Mary",
-      "birthday": "1997-11-05T16:00:00.000Z",
-      "age": 26,
+      "id": "1f5d",
+      "name": "Abula",
+      "birthday": "1993-09-23T16:00:00.000Z",
+      "age": 30,
+      "native": false,
+      "address": "3, Frog Street, Ka City"
+    },
+    {
+      "id": "de14",
+      "name": "Lily",
+      "birthday": "1983-01-22T16:00:00.000Z",
+      "age": 41,
+      "native": false,
+      "address": "500 Main Street, K City"
+    },
+    {
+      "id": "5219",
+      "name": "Andy",
+      "birthday": "1980-12-30T16:00:00.000Z",
+      "age": 43,
+      "native": false,
+      "address": "300 Yoyo Street, T City"
+    },
+    {
+      "id": "85ba",
+      "name": "Uganda",
+      "birthday": "2001-04-14T16:00:00.000Z",
+      "age": 23,
       "native": true,
-      "address": "123 Main Street, K City"
+      "address": "8787, Bubu Street, Ka City"
     }
   ]
 }

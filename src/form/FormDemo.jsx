@@ -7,9 +7,10 @@ export function FormDemo() {
     return (
         <>
             <UserForm />
+            <hr />
             <UserList />
             <br />
-            <Link href="/">Home</Link>
+            <Link href="/" className="flex justify-center">Home</Link>
         </>
         
     )
