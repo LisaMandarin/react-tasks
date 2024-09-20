@@ -19,14 +19,14 @@ export const fetchData = async() => {
     }
 }
 
-export const deleteUser = async(id, dataSource, setDatasource, setOriginalData) => {
+export const deleteUser = async(id, dataSource, setDataSource, setOriginalData) => {
     try {
         const url = `http://localhost:3001/users/${id}`
         axios.delete(url)
         console.log('Delete user successfully')
         
         const updatedData = dataSource.filter(d => d.id !== id)
-        setDatasource(updatedData)
+        setDataSource(updatedData)
         setOriginalData(updatedData)
         console.log('updated Datasource and OriginalData')
     } catch (err) {
@@ -34,10 +34,10 @@ export const deleteUser = async(id, dataSource, setDatasource, setOriginalData) 
     }
 }
 
-export const refreshTable = async(setDatasource, setOriginalData) => {
+export const refreshTable = async(setDataSource, setOriginalData) => {
     try {
         const updatedData = await fetchData()
-        setDatasource(updatedData)
+        setDataSource(updatedData)
         setOriginalData(updatedData)
         console.log('table refreshed')
     } catch (err) {

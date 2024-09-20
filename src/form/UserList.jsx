@@ -2,11 +2,14 @@ import { Button, Space, Table, Typography } from "antd"
 import { bDayFormat, fetchData, nativeYN, deleteUser, refreshTable } from "./userListUtil"
 import { useEffect, useState } from "react"
 import { DeleteTwoTone, EditTwoTone } from "@ant-design/icons"
+import { UserModal } from "./UserModal"
 const { Title } = Typography
 
 export function UserList() {
     const [ originalData, setOriginalData ] = useState([])
-    const [ dataSource, setDatasource ] = useState([])
+    const [ dataSource, setDataSource ] = useState([])
+    const [ isModalOpen, setIsModalOpen ] = useState(false)
+    const [ editedUser, setEditedUser ] = useState(null)
     
     const columns = [
         {title: 'Name', dataIndex: 'name', key: 'name'},
@@ -20,16 +23,24 @@ export function UserList() {
         {title: 'Address', dataIndex: 'address', key: 'address'},
         {title: 'Action', dataIndex: 'action', key: 'action', render: (_, record) => (
             <Space size="large">
-                <DeleteTwoTone onClick={() => deleteUser(record.id, dataSource, setDatasource, setOriginalData)}/>
-                <EditTwoTone />
+                <DeleteTwoTone onClick={() => deleteUser(record.id, dataSource, setDataSource, setOriginalData)}/>
+                <EditTwoTone onClick={() => showModal(record)}/>
             </Space>
         )}
     ]
 
+    const showModal = (record) => {
+        setIsModalOpen(true)
+        setEditedUser(record)
+    } 
+
+    useEffect(() => {
+        console.log('dataSource: ', dataSource)
+    })
     useEffect(() => {
         fetchData()
             .then(response => {
-                setDatasource(response)
+                setDataSource(response)
                 setOriginalData(response)
             })
     }, [])
@@ -39,7 +50,7 @@ export function UserList() {
             className="flex flex-col gap-3 w-[650px] mx-auto"
         >
             <Title underline className="text-center">User List</Title>
-            <Button type="primary" onClick={()=>refreshTable(setDatasource, setOriginalData)}>Refresh</Button>
+            <Button type="primary" onClick={()=>refreshTable(setDataSource, setOriginalData)}>Refresh</Button>
             <Table 
                 dataSource={dataSource}
                 columns={columns}
@@ -47,6 +58,13 @@ export function UserList() {
                     position: ['bottomCenter'],
                     pageSize: 5
                 }}
+            />
+            <UserModal 
+                isModalOpen={isModalOpen} 
+                setIsModalOpen={setIsModalOpen} 
+                editedUser={editedUser}
+                setDatasource={setDataSource}
+                setOriginalData={setOriginalData}
             />
         </div>
     )
