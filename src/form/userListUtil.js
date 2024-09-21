@@ -34,6 +34,14 @@ export const deleteUser = async(id, dataSource, setDataSource, setOriginalData) 
     }
 }
 
+export function onSearch(value, originalData, setDataSource) {
+    const filteredData = originalData.filter(d => 
+        d.name.toLowerCase().includes(value.toLowerCase()) || 
+        d.address.toLowerCase().includes(value.toLowerCase())
+    )
+    setDataSource(filteredData)
+}
+
 export const refreshTable = async(setDataSource, setOriginalData) => {
     try {
         const updatedData = await fetchData()

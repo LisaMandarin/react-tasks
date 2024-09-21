@@ -1,9 +1,10 @@
-import { Button, Space, Table, Typography } from "antd"
-import { bDayFormat, fetchData, nativeYN, deleteUser, refreshTable } from "./userListUtil"
+import { Button, Space, Table, Typography, Input } from "antd"
+import { bDayFormat, fetchData, nativeYN, deleteUser, onSearch, refreshTable } from "./userListUtil"
 import { useEffect, useState } from "react"
 import { DeleteTwoTone, EditTwoTone } from "@ant-design/icons"
 import { UserModal } from "./UserModal"
 const { Title } = Typography
+const { Search } = Input
 
 export function UserList() {
     const [ originalData, setOriginalData ] = useState([])
@@ -35,9 +36,6 @@ export function UserList() {
     } 
 
     useEffect(() => {
-        console.log('dataSource: ', dataSource)
-    })
-    useEffect(() => {
         fetchData()
             .then(response => {
                 setDataSource(response)
@@ -50,7 +48,16 @@ export function UserList() {
             className="flex flex-col gap-3 w-[650px] mx-auto"
         >
             <Title underline className="text-center">User List</Title>
-            <Button type="primary" onClick={()=>refreshTable(setDataSource, setOriginalData)}>Refresh</Button>
+            <div className="flex flex-row justify-end">
+                <Space>
+                    <Button type="primary" onClick={()=>refreshTable(setDataSource, setOriginalData)}>Refresh</Button>
+                    <Search 
+                        placeholder="Input search text"
+                        onSearch={(value) => onSearch(value, originalData, setDataSource)}
+                        onChange={(e) => onSearch(e.target.value, originalData, setDataSource)}
+                    />
+                </Space>
+            </div>
             <Table 
                 dataSource={dataSource}
                 columns={columns}
