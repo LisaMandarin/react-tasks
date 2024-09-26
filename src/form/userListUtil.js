@@ -47,7 +47,6 @@ export const refreshTable = async(setDataSource, setOriginalData) => {
         const updatedData = await fetchData()
         setDataSource(updatedData)
         setOriginalData(updatedData)
-        console.log('table refreshed')
     } catch (err) {
         console.error('Failed to refresh table: ', err.message)
     }

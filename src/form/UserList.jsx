@@ -70,7 +70,7 @@ export function UserList() {
                 isModalOpen={isModalOpen} 
                 setIsModalOpen={setIsModalOpen} 
                 editedUser={editedUser}
-                setDatasource={setDataSource}
+                setDataSource={setDataSource}
                 setOriginalData={setOriginalData}
             />
         </div>
