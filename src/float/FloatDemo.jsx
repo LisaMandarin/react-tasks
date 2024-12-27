@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import potato from "../assets/potato.png";
+import scene1 from "../assets/scene1.jpg";
+import scene2 from "../assets/scene2.jpg";
+import scene3 from "../assets/scene3.jpg";
 
 export function FloatDemo() {
   const PotatoImage = ({ floatClass }) => {
@@ -95,6 +98,13 @@ export function FloatDemo() {
         <PotatoImage floatClass='float-left' />
         <PotatoImage floatClass='float-left' />
         <PotatoImage floatClass='float-left' />
+      </div>
+      <div className="p-4 border after:content-[''] after:table after:clear-both box-border">
+        <h1 className="text-red-600 text-center">(container)after:content-[&apos;&apos;] after:table after:clear-both box-border</h1>
+        <h1 className="text-red-600 text-center">(image)float-left w-1/3</h1>
+        <img src={scene1} alt="scene1" className="float-left w-1/3" />
+        <img src={scene2} alt="scene2" className="float-left w-1/3" />
+        <img src={scene3} alt="scene3" className="float-left w-1/3" />
       </div>
 
       <div className="text-center">
