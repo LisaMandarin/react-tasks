@@ -77,8 +77,8 @@ export function FloatDemo() {
         </span>
       </div>
       <div className="p-4 border after:content-[''] after:table after:clear-both">
+        <h1 className="text-red-600 text-center">(container)after:content-[&apos;&apos;] after:table after:clear-both</h1>
         <h1 className="text-red-600 text-center">(image)float-left</h1>
-        <h1 className="after:content-[''] after:table after:clear-both"></h1>
         <PotatoImage floatClass="float-left" />
         <span>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
@@ -88,6 +88,13 @@ export function FloatDemo() {
           error praesentium, amet alias necessitatibus architecto repudiandae
           accusantium illum ipsa, doloremque blanditiis voluptatem! Natus, amet!
         </span>
+      </div>
+      <div className="p-4 afer:content-[''] after:table after:clear-both">
+        <h1 className="text-red-600 text-center">(image)float-left</h1>
+        <PotatoImage floatClass='float-left' />
+        <PotatoImage floatClass='float-left' />
+        <PotatoImage floatClass='float-left' />
+        <PotatoImage floatClass='float-left' />
       </div>
 
       <div className="text-center">
