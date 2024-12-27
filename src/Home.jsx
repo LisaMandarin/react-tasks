@@ -3,12 +3,13 @@ const { Link } = Typography
 
 export function Home() {
     const items = [
-        {path: "/to-do-list/todolist", name: "Todo List"},
-        {path: "/useCallback/callback", name: "useCallback"},
-        {path: "/position/positiondemo", name: "Position"},
-        {path: "/display/displaydemo", name: "Display"},
-        {path: "/flex/flexdemo", name: 'Flexbox'},
-        {path: '/form/formdemo', name: 'Form'}
+        {path: "/todolist", name: "Todo List"},
+        {path: "/callback", name: "useCallback"},
+        {path: "/position-demo", name: "Position"},
+        {path: "/display-demo", name: "Display"},
+        {path: "/flex-demo", name: 'Flexbox'},
+        {path: '/form-demo', name: 'Form'},
+        {path: '/float-demo', name: 'Float'}
     ]
     return (
         <div className="flex flex-row gap-2 m-4">

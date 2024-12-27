@@ -6,18 +6,20 @@ import { PositionDemo } from "./position/PositionDemo"
 import { DisplayDemo } from "./display/DisplayDemo"
 import { FlexDemo } from "./Flex/FlexDemo"
 import { FormDemo } from "./form/FormDemo"
+import { FloatDemo } from "./float/FloatDemo"
 
 export default function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/to-do-list/todolist" element={<TodoList />}/>
-        <Route path="/useCallback/callback" element={<Callback />} />
-        <Route path="/position/positiondemo" element={< PositionDemo/>} />
-        <Route path="/display/displaydemo" element={<DisplayDemo />}/>
-        <Route path="/flex/flexdemo" element={<FlexDemo />}/>
-        <Route path="/form/formdemo" element={<FormDemo />} />
+        <Route path="/todolist" element={<TodoList />}/>
+        <Route path="/callback" element={<Callback />} />
+        <Route path="/position-demo" element={< PositionDemo/>} />
+        <Route path="/display-demo" element={<DisplayDemo />}/>
+        <Route path="/flex-demo" element={<FlexDemo />}/>
+        <Route path="/form-demo" element={<FormDemo />} />
+        <Route path="/float-demo" element={<FloatDemo />} />
       </Routes>
     </>
   )
